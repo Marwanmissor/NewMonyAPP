@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="293.0" prefWidth="558.0" style="-fx-background-color: #4c039f;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.boshy.newmonyapp.Helwan1CN">
+   <children>
+      <TextField fx:id="material" layoutX="366.0" layoutY="161.0" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="44.0" prefHeight="27.0" prefWidth="220.0" style="-fx-text-fill: #fd6c23;" stylesheets="@st.css" text="حلوان 1" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="196.0" layoutY="161.0" />
+      <TextField layoutX="14.0" layoutY="161.0" />
+      <Label alignment="CENTER" layoutX="374.0" layoutY="132.0" prefHeight="27.0" prefWidth="133.0" style="-fx-text-fill: #fd6c23;" text="اجمالي المدفوع">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="39.0" layoutY="132.0" prefHeight="27.0" prefWidth="124.0" style="-fx-text-fill: #fd6c23;" text="فودافون كاش">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="221.0" layoutY="132.0" prefHeight="27.0" prefWidth="133.0" style="-fx-text-fill: #fd6c23;" text="فيزا">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="248.0" layoutY="137.0" mnemonicParsing="false" />
+      <CheckBox layoutX="31.0" layoutY="137.0" mnemonicParsing="false" />
+      <ImageView fitHeight="98.0" fitWidth="133.0" layoutX="174.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LOGO.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="70.0" layoutY="254.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="الجمعه &gt;" />
+      <Button layoutX="373.0" layoutY="254.0" mnemonicParsing="false" onAction="#Helwan2Buttom" prefHeight="25.0" prefWidth="112.0" text="&lt; حلوان 2" />
+      <Label alignment="TOP_RIGHT" layoutX="136.0" layoutY="210.0" prefHeight="27.0" prefWidth="284.0" style="-fx-text-fill: #fd6c23;" stylesheets="@st.css" text="الاجمالي" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
