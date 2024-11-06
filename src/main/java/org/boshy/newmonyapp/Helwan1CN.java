@@ -1,48 +1,86 @@
 package org.boshy.newmonyapp;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.Font;
+import javafx.scene.*;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class Helwan1CN {
     @FXML
-    private Label NameH1;
-    private ImageView logoH1;
-    private Label AllLabelH1;
-    private Label TotalH1;
-    private Label VisaLabelH1;
-    private Label SWLabelH1;
-    private TextField AllTFH1;
+    private TextField AllTFH1, VisaTFH1, SWtfH1;
     @FXML
-    private TextField VisaTFH1;
-    private TextField SWtfH1;
-    private Button FridayButtonH1;
-    private Button NextButtonH1;
+    private Button FridayButtonH1, NextButtonH1;
     @FXML
-    private RadioButton VisaCHH1;
-    private Checkbox SWCHH1;
+    private CheckBox VisaCHH1, SWCHH1;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    Data Hl1 = new Data();
+
     @FXML
-    private void Helwan2Buttom() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Helwan2.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = new Stage();
-        stage.setTitle("Helwan2");
+    private void Next(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Helwan2.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("حلوان 2");
         stage.setScene(scene);
         stage.show();
+        Data();
+        System.out.println(Hl1.toString());
     }
-    public void enable(){
-        if (VisaCHH1.isSelected()){
+@FXML
+    private void Friday(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Friday.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("الجمعه");
+        stage.setScene(scene);
+        stage.show();
+        Data();
+    }
+
+    public void enableVisa() {
+        if (VisaCHH1.isSelected()) {
             VisaTFH1.setDisable(false);
 
+        } else
+            VisaTFH1.setDisable(true);
+    }
+
+    public void enableSW() {
+        SWtfH1.setDisable(false);
+        if (!SWCHH1.isSelected()){
+            SWtfH1.setDisable(true);
         }
+    }
+
+    private void Data() {
+        Hl1.setBranchName("حلوان 1");
+        if (AllTFH1.getText().isEmpty()) {
+            Hl1.setTotal(0);
+        } else {
+            Hl1.setTotal(Float.parseFloat(AllTFH1.getText()));
+        }
+
+        if(VisaTFH1.isDisabled() || VisaTFH1.getText().isEmpty()){
+            Hl1.setVisa(0);
+        }else {
+            Hl1.setVisa(Float.parseFloat(VisaTFH1.getText()));
+        }
+
+        if (SWtfH1.isDisabled() || SWtfH1.getText().isEmpty()){
+            Hl1.setSmartWallet(0);
+        }else {
+            Hl1.setSmartWallet(Float.parseFloat(SWtfH1.getText()));
+        }
+
     }
 }

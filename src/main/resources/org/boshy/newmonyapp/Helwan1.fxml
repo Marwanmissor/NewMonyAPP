@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -23,13 +22,13 @@
             <Font name="Mj_Shehab" size="18.0" />
          </font>
       </Label>
-      <CheckBox fx:id="SWCHH1" layoutX="28.0" layoutY="199.0" mnemonicParsing="false" />
+      <CheckBox fx:id="SWCHH1" layoutX="28.0" layoutY="199.0" mnemonicParsing="false" onAction="#enableSW" />
       <ImageView fx:id="logoH1" fitHeight="151.0" fitWidth="170.0" layoutX="385.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@LOGO.png" />
          </image>
       </ImageView>
-      <Button fx:id="NextButtonH1" layoutX="410.0" layoutY="369.0" mnemonicParsing="false" onAction="#Helwan2Buttom" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #a1bd9f; -fx-text-fill: #0d3d48;" stylesheets="@BackGround.css" text="&gt; حلوان 2">
+      <Button fx:id="NextButtonH1" layoutX="410.0" layoutY="369.0" mnemonicParsing="false" onAction="#Next" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #a1bd9f; -fx-text-fill: #0d3d48;" stylesheets="@BackGround.css" text="&gt; حلوان 2">
          <font>
             <Font name="Arial Bold Italic" size="16.0" />
          </font></Button>
@@ -40,7 +39,7 @@
             <Font name="Mj_Shehab" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="FridayButtonH1" layoutX="54.0" layoutY="369.0" mnemonicParsing="false" onAction="#Helwan2Buttom" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #a1bd9f; -fx-text-fill: #0d3d48;" stylesheets="@BackGround.css" text="الجمعه &lt;">
+      <Button fx:id="FridayButtonH1" layoutX="54.0" layoutY="369.0" mnemonicParsing="false" onAction="#Friday" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #a1bd9f; -fx-text-fill: #0d3d48;" stylesheets="@BackGround.css" text="الجمعه &lt;">
          <font>
             <Font name="Arial Bold Italic" size="16.0" />
          </font>
@@ -55,6 +54,6 @@
             <Font name="Mj_Shehab" size="18.0" />
          </font>
       </Label>
-      <RadioButton fx:id="VisaCHH1" layoutX="228.0" layoutY="199.0" mnemonicParsing="false" onAction="#enable" />
+      <CheckBox fx:id="VisaCHH1" layoutX="228.0" layoutY="199.0" mnemonicParsing="false" onAction="#enableVisa" />
    </children>
 </AnchorPane>

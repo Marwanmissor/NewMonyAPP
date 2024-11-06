@@ -17,11 +17,8 @@ public class HelloApplication extends Application {
         Label myLabel = new Label();
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Helwan1");
-        Font customFont = Font.loadFont("file:E:/NewMonyAPP/src/main/resources/org/boshy/newmonyapp/AgaMashq.ttf", 14);
         stage.setScene(scene);
         stage.show();
-        myLabel.setFont(customFont);
-
     }
 
     public static void main(String[] args) {
