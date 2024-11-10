@@ -11,6 +11,11 @@ target/
 *.iws
 *.iml
 *.ipr
+*.exe
+*.jar
+*.txt
+*.doc
+*.docx
 
 ### Eclipse ###
 .apt_generated

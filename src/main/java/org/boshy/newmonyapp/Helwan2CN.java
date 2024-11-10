@@ -45,6 +45,10 @@ public class Helwan2CN {
         stage.setScene(scene);
         stage.show();
         Data();
+        Hl2.toString();
+        System.out.println(Hl2.toString());
+        file ( Hl2.toString());
+        System.out.println(H1.Hl1.toString());
     }
     public void enableVisa(){
         if (VisaCHH2.isSelected()){
@@ -79,5 +83,12 @@ public class Helwan2CN {
         }else {
             Hl2.setSmartWallet(Float.parseFloat(SWtfH2.getText()));
         }
+
     }
-}
+    public void file (String s)throws IOException{
+        MyFile myFile = new MyFile();
+        myFile.write(s);
+    }
+    }
+
+

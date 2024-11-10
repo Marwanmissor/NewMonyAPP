@@ -52,12 +52,19 @@ public class Data {
 
     @Override
     public String toString() {
-        return "Data{" +
-                "BranchName='" + BranchName + '\'' +
-                ", Total=" + Total +
-                ", Visa=" + Visa +
-                ", SmartWallet=" + SmartWallet +
-                ", Cash=" + Cash +
-                '}';
+    String dataToTxt = new String("\n اسم الفرع : " + this.BranchName);
+    if (this.Total == 0 ){
+        dataToTxt += "\n للاسف لا يوجد ايراد لهذا الفرع اليوم";
+        return dataToTxt ;
+    }else {
+        dataToTxt += "\n الدخل اليومي = " + this.Total;
+    }
+    if (this.Visa != 0){
+        dataToTxt += "\n الفيزا = " + this.Visa;
+    }
+    if (this.SmartWallet != 0){
+            dataToTxt += "\n المحفظه الالكترونيه = " +this.SmartWallet;
+        }
+        return dataToTxt + "\n الاجمالي = " + getCash() ;
     }
 }

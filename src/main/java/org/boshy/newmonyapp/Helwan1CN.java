@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 public class Helwan1CN {
     @FXML
     private TextField AllTFH1, VisaTFH1, SWtfH1;
@@ -24,7 +25,6 @@ public class Helwan1CN {
     private Scene scene;
     private Parent root;
     Data Hl1 = new Data();
-
     @FXML
     private void Next(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Helwan2.fxml"));
@@ -34,7 +34,9 @@ public class Helwan1CN {
         stage.setScene(scene);
         stage.show();
         Data();
+        Hl1.toString();
         System.out.println(Hl1.toString());
+        file(Hl1.toString());
     }
 @FXML
     private void Friday(ActionEvent event) throws IOException {
@@ -45,6 +47,7 @@ public class Helwan1CN {
         stage.setScene(scene);
         stage.show();
         Data();
+
     }
 
     public void enableVisa() {
@@ -82,5 +85,9 @@ public class Helwan1CN {
             Hl1.setSmartWallet(Float.parseFloat(SWtfH1.getText()));
         }
 
+    }
+    public void file (String s)throws IOException{
+        MyFile myFile = new MyFile();
+        myFile.write(s);
     }
 }
