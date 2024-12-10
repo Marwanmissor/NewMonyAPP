@@ -1,0 +1,6 @@
+.root {
+    -fx-background-image: url("file:/E:/NewMonyAPP/src/main/resources/org/boshy/newmonyapp/llleaves.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}

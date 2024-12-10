@@ -1,0 +1,20 @@
+.text-field {
+    -fx-background-color: rgb(31, 32, 35);
+    -fx-border-color: rgb(60, 63, 68);
+    -fx-border-radius: 4px;
+    -fx-font-size: 13px;
+    -fx-text-fill: rgb(247, 248, 248);  /* لون النص */
+    -fx-pref-height: 46px;
+    -fx-background-insets: 0;
+    -fx-border-width: 1px;
+    -fx-background-radius: 4px;
+    -fx-background-image: none;
+    -fx-transition: border 0.15s ease;
+}
+
+.text-field:focused {
+    -fx-border-color: rgb(100, 153, 255); /* لون الحافة عند التركيز */
+    -fx-box-shadow: none;  /* إلغاء تأثير الظل */
+    -fx-background-insets: 0;
+    -fx-border-width: 1px;
+}

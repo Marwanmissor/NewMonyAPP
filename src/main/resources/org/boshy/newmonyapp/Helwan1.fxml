@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="587.0" style="-fx-background-color: #0d3d48;" stylesheets="@BackGround.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.boshy.newmonyapp.Helwan1CN">
+   <children>
+      <TextField fx:id="AllTFH1" alignment="CENTER" layoutX="392.0" layoutY="226.0" prefHeight="27.0" prefWidth="170.0" promptText="ادخل الايراد" stylesheets="@TextField.css" />
+      <Label fx:id="NameH1" alignment="CENTER" layoutX="46.0" layoutY="54.0" prefHeight="70.0" prefWidth="330.0" stylesheets="@Lable.css" text="حلوان 1" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Aref Ruqaa" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="AllLabelH1" alignment="CENTER" layoutX="387.0" layoutY="194.0" prefHeight="27.0" prefWidth="180.0" style="-fx-text-fill: #a1bd9f;" text="اجمالي المدفوع">
+         <font>
+            <Font name="Mj_Shehab" size="18.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="SWCHH1" layoutX="28.0" layoutY="199.0" mnemonicParsing="false" onAction="#enableSW" />
+      <ImageView fx:id="logoH1" fitHeight="151.0" fitWidth="170.0" layoutX="385.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LOGO.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="NextButtonH1" layoutX="410.0" layoutY="369.0" mnemonicParsing="false" onAction="#Next" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #a1bd9f; -fx-text-fill: #0d3d48;" stylesheets="@BackGround.css" text="&gt; حلوان 2">
+         <font>
+            <Font name="Arial Bold Italic" size="16.0" />
+         </font></Button>
+      <TextField fx:id="SWtfH1" alignment="CENTER" disable="true" layoutX="20.0" layoutY="226.0" prefHeight="27.0" prefWidth="170.0" promptText="ادخل المحفظه الذكيه" stylesheets="@TextField.css" />
+      <TextField fx:id="VisaTFH1" alignment="CENTER" disable="true" layoutX="206.0" layoutY="226.0" prefHeight="27.0" prefWidth="170.0" promptText="ادخل الفيزا" stylesheets="@TextField.css" />
+      <Label fx:id="VisaLabelH1" alignment="CENTER" layoutX="244.0" layoutY="194.0" prefHeight="27.0" prefWidth="146.0" style="-fx-text-fill: #a1bd9f;" text="فيزا">
+         <font>
+            <Font name="Mj_Shehab" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="SWLabelH1" alignment="CENTER" layoutX="45.0" layoutY="193.0" prefHeight="27.0" prefWidth="146.0" style="-fx-text-fill: #a1bd9f;" text="المحفظه الذكية">
+         <font>
+            <Font name="Mj_Shehab" size="18.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="VisaCHH1" layoutX="228.0" layoutY="199.0" mnemonicParsing="false" onAction="#enableVisa" />
+   </children>
+</AnchorPane>
