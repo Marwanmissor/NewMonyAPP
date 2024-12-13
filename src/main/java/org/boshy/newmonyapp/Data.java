@@ -69,7 +69,7 @@ public class Data {
     public String toString() {
         String dataToTxt = "\n اسم الفرع : " + this.BranchName;
         if (this.Total == 0) {
-            dataToTxt += "\n للاسف لا يوجد ايراد لهذا الفرع اليوم";
+            dataToTxt += "\n للاسف لا يوجد ايراد لهذا الفرع اليوم" +"\n-------------------------------------------------------";
             return dataToTxt;
         } else {
             dataToTxt += "\n الدخل اليومي = " + formatNumber(this.Total);
@@ -80,7 +80,7 @@ public class Data {
         if (this.SmartWallet != 0) {
             dataToTxt += "\n المحفظه الالكترونيه = " + formatNumber(this.SmartWallet);
         }
-        return dataToTxt + "\n الاجمالي = " + formatNumber(getCash());
+        return dataToTxt + "\n الاجمالي = " + formatNumber(getCash())+"\n-------------------------------------------------------";
     }
 
     // إضافة دالة لتنسيق الأرقام

@@ -11,6 +11,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class HaHelwanCN {
@@ -24,6 +25,7 @@ public class HaHelwanCN {
     private Scene scene;
     private Parent root;
     DataCollector Hah = new DataCollector();
+    private Desktop Dektop;
 
     public void Done(ActionEvent event) throws IOException, InterruptedException {
         MyFile myFile = new MyFile();
@@ -33,6 +35,7 @@ public class HaHelwanCN {
         myFile.write( Hah.TotalofALL());
         myFile.close();
         Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        Dektop.getDesktop().open(myFile.MyFile);
         Thread.sleep(1000);
         currentStage.close();
     }

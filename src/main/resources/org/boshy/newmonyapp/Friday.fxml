@@ -29,7 +29,7 @@
             <Image url="@LOGO.png" />
          </image>
       </ImageView>
-      <Button layoutX="410.0" layoutY="369.0" mnemonicParsing="false" onAction="#Done" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #a1bd9f; -fx-text-fill: #0d3d48;" stylesheets="@BackGround.css" text="تم و حفظ">
+      <Button layoutX="410.0" layoutY="369.0" mnemonicParsing="false" onAction="#Done" onKeyReleased="#Done" prefHeight="25.0" prefWidth="155.0" style="-fx-background-color: #a1bd9f; -fx-text-fill: #0d3d48;" stylesheets="@BackGround.css" text="تم و حفظ">
          <font>
             <Font name="Arial Bold Italic" size="16.0" />
          </font>
